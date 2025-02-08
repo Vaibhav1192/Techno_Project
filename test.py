@@ -15,7 +15,7 @@ def splitter_decorator(function):
 @splitter_decorator # this is executed next
 @lowercase_decorator # this is executed first
 def hello():
-   return 'Hello World'
+   return 'Hello World '
 hello()   # output => [ 'hello' , 'world' ]
 print(hello())
 
