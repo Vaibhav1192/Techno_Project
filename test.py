@@ -41,5 +41,24 @@ def str_rng(T):
 print(str_rng)
 
 
-      
+def my_generator():
+    yield 1
+    yield 2
+    yield 3
+
+# Using the generator
+gen = my_generator()
+for value in gen:
+    print(value)
+
+def infinite_sequence():
+    num = 0
+    while True:
+        yield num
+        num += 1
+
+gen = infinite_sequence()
+for i in range(10):
+    print(next(gen))
+
 
