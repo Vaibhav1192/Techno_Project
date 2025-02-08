@@ -12,7 +12,7 @@ output = encode_string(S)
 print(output)  # Output: p3u4n2e1
 '''
 
-#Another approach
+#Another approach for above output
 
 def encode_string(s):
     encoded = []
@@ -46,7 +46,7 @@ output = count_occurrences(Input)
 print(output)
 
 '''
-
+# for Tacnique interview
 def split_list(lst, split_value):
     return [lst[i:i + split_value] for i in range(0, len(lst), split_value)]
 
@@ -68,6 +68,31 @@ Split_Value = 3
 
 output = split_set(List1, Split_Value)
 print(output)
+
+'''
+Write a code to find the number of occurrences of each element in the array.
+Input = [3,4,3,5,3,6] 
+Expected Output={3:3,4:1,5:1,6:1} 
+Key : Value
+'''
+def count_occurrences(arr):
+    occurrence_dict = {}
+    for element in arr:
+        if element in occurrence_dict:
+            occurrence_dict[element] += 1
+        else:
+            occurrence_dict[element] = 1
+    return occurrence_dict
+
+# Input
+input_array = [3, 4, 3, 5, 3, 6]
+
+# Get the occurrences
+result = count_occurrences(input_array)
+
+# Output
+print(result)  # Expected Output: {3: 3, 4: 1, 5: 1, 6: 1}
+
 
 import pandas as pd
 
